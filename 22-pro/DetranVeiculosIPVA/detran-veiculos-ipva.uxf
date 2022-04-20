@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="13.3">
+  <zoom_level>15</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>615</x>
+      <y>240</y>
+      <w>225</w>
+      <h>240</h>
+    </coordinates>
+    <panel_attributes>Veiculo
+--
+# modelo: String
+# ano: int
+# placa: String
+# valor: double
+--
++ gets() e sets() 
++ valorIPVA(): double
++ toString(): String</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>465</x>
+      <y>555</y>
+      <w>255</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>Carro
+--
+- portas: int
+- alugado: boolean
+--
++ gets() e sets()
++ toString(): String</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>765</x>
+      <y>555</y>
+      <w>255</w>
+      <h>135</h>
+    </coordinates>
+    <panel_attributes>Moto
+--
+- cilindradas: int
+--
++ gets() e sets()
++ toString(): String</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>765</x>
+      <y>465</y>
+      <w>105</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;50.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>555</x>
+      <y>465</y>
+      <w>135</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>70.0;10.0;10.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>210</x>
+      <y>285</y>
+      <w>240</w>
+      <h>135</h>
+    </coordinates>
+    <panel_attributes>Detran
+--
+- estado: String
+--
++ gets() e sets()
++ toString(): String</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>435</x>
+      <y>300</y>
+      <w>210</w>
+      <h>75</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+gerencia &gt;
+m2=0..*</panel_attributes>
+    <additional_attributes>10.0;20.0;120.0;20.0</additional_attributes>
+  </element>
+</diagram>

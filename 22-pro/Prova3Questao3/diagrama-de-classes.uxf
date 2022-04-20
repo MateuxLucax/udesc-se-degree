@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="13.3">
+  <zoom_level>8</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>496</x>
+      <y>296</y>
+      <w>408</w>
+      <h>184</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;abstract&gt;&gt;
+LinhaTelefonica
+--
+- numero: String
+- proprietario: String
+- anoAquisicao: int
+--
+LinhaTelefonica(numero: String, proprietario: String, anoAquisicao: int)
++ getNumero(): String
++ getProprietario(): String
++ setProprietario(proprietario: String): boolean
++ getAnoAquisicao(): int
++ setAnoAquisicao(anoAquisicao: int): boolean
+/+ valorMensalAssinatura(): double/
+/+ toString(): String/</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>136</x>
+      <y>544</y>
+      <w>536</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;abstract&gt;&gt;
+LinhaResidencial
+--
+- minutosFranquia: int
+--
+LinhaResidencial(numero: String, proprietario: String, anoAquisicao: int, minutosFranquia: int)
++ getMinutosFranquia(): String
++ setMinutosFranquia(minutosFranquia: int): boolean
++ valorMensalAssinatura(): double
++ toString(): String</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>736</x>
+      <y>544</y>
+      <w>544</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;abstract&gt;&gt;
+LinhaComercial
+--
+- quantidadeRamais: int
+--
+LinhaComercial(numero: String, proprietario: String, anoAquisicao: int, quantidadeRamais: int)
++ getQuantidadeRamais(): String
++ setQuantidadeRamais(minutosFranquia: int): boolean
++ valorMensalAssinatura(): double
++ toString(): String</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>896</x>
+      <y>472</y>
+      <w>120</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;130.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>392</x>
+      <y>472</y>
+      <w>120</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>130.0;10.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>216</x>
+      <y>344</y>
+      <w>176</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>Companhia
+--
+- nome: String
+--
+Companhia(nome: String)
++ getArrecadacao(): String
++ toString(): String</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>384</x>
+      <y>376</y>
+      <w>128</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m2=*
+contém &gt;</panel_attributes>
+    <additional_attributes>10.0;20.0;140.0;20.0</additional_attributes>
+  </element>
+</diagram>

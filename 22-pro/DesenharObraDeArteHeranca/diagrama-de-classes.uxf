@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="13.3">
+  <zoom_level>13</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>845</x>
+      <y>520</y>
+      <w>455</w>
+      <h>156</h>
+    </coordinates>
+    <panel_attributes>Circulo
+--
+-diametro: int
+--
++ Circulo(cor: String, diametro: int)
++ Circulo(cor: String, diametro: int, int x, int y)
++ gets() e sets()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>494</x>
+      <y>169</y>
+      <w>429</w>
+      <h>286</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;abstract&gt;&gt;
+/FormaGeometrica/
+--
+-cor: String
+-x: int
+-y: int
+--
++ FormaGeometrica(cor: String)
++ FormaGeometrica(cor: String, x: int, y: int)
++ moverHorizontal(distancia: int): void
++ moverVertical(distancia: int): void
+/+ desenhar(): void/
++ apagar(): void
++ gets() e sets()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>130</x>
+      <y>546</y>
+      <w>481</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>Quadrado
+--
+-lado: int
+--
++ Quadrado(cor: String, lado: int)
++ Quadrado(cor: String, lado: int, int x, int y)
++ gets() e sets()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>455</x>
+      <y>741</y>
+      <w>520</w>
+      <h>156</h>
+    </coordinates>
+    <panel_attributes>Triangulo
+--
+-base: int
+-altura: int
+--
++ Triangulo(cor: String, base: int, lado: int)
++ Triangulo(cor: String, base: int, lado: int, int x, int y)
++ gets() e sets()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>702</x>
+      <y>442</y>
+      <w>39</w>
+      <h>325</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;230.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>351</x>
+      <y>442</y>
+      <w>169</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>110.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>910</x>
+      <y>442</y>
+      <w>182</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;120.0;60.0</additional_attributes>
+  </element>
+</diagram>
