@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/55-ppr.iml" filepath="$PROJECT_DIR$/55-ppr.iml" />
+      <module fileurl="file://$PROJECT_DIR$/command/Command/Command.iml" filepath="$PROJECT_DIR$/command/Command/Command.iml" />
+      <module fileurl="file://$PROJECT_DIR$/command/Command1/Command1.iml" filepath="$PROJECT_DIR$/command/Command1/Command1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/command/Command2/Command2.iml" filepath="$PROJECT_DIR$/command/Command2/Command2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/command/Command3/Command3.iml" filepath="$PROJECT_DIR$/command/Command3/Command3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/command/Command4/Command4.iml" filepath="$PROJECT_DIR$/command/Command4/Command4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/prototype/Prototype1/Prototype1.iml" filepath="$PROJECT_DIR$/prototype/Prototype1/Prototype1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/prototype/Prototype2/Prototype2.iml" filepath="$PROJECT_DIR$/prototype/Prototype2/Prototype2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/adapter/adapter.iml" filepath="$PROJECT_DIR$/adapter/adapter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mvc/mvc.iml" filepath="$PROJECT_DIR$/mvc/mvc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/template/template.iml" filepath="$PROJECT_DIR$/template/template.iml" />
+    </modules>
+  </component>
+</project>
