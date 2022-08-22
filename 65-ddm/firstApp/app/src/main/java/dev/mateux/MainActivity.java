@@ -1,13 +1,11 @@
 package dev.mateux;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -16,11 +14,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button loginBtn = findViewById(R.id.button);
-        EditText editTextUser = findViewById(R.id.Username);
-        EditText editTextPassword = findViewById(R.id.password);
+        Button loginBtn = findViewById(R.id.main_login_button);
+        EditText editTextUser = findViewById(R.id.main_username);
+        EditText editTextPassword = findViewById(R.id.main_password);
 
-        loginBtn.setOnClickListener((View view) -> {
+        loginBtn.setOnClickListener(view -> {
             String user = editTextUser.getText().toString();
             String password = editTextPassword.getText().toString();
 
@@ -29,8 +27,6 @@ public class MainActivity extends AppCompatActivity {
             } else  {
                 Toast.makeText(view.getContext(), "Unauthorized", Toast.LENGTH_SHORT).show();
             }
-            startActivity(new Intent(this, HomeActivity.class));
         });
-
     }
 }
