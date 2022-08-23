@@ -16,8 +16,6 @@ public class Client {
                 System.out.println(data);
                 readBytes = response.read(rawData);
             }
-    //            connection.getOutputStream().write("Piroca".getBytes());
-    //            System.out.println("a");
         } catch (Exception e) {
             System.out.println("Error while connection to host: " + e.getMessage());
         }
