@@ -26,6 +26,7 @@
             android:hint="@string/username"
             android:inputType="textPersonName"
             android:minHeight="48dp"
+            android:textColorHint="#757575"
             android:visibility="visible"
             tools:visibility="visible" />
 
@@ -37,7 +38,8 @@
             android:ems="10"
             android:hint="@string/password"
             android:inputType="textPassword"
-            android:minHeight="48dp" />
+            android:minHeight="48dp"
+            android:textColorHint="#757575" />
 
         <Button
             android:id="@+id/main_login_button"

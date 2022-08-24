@@ -1,5 +1,6 @@
 package dev.mateux;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
@@ -22,8 +23,8 @@ public class MainActivity extends AppCompatActivity {
             String user = editTextUser.getText().toString();
             String password = editTextPassword.getText().toString();
 
-            if (password.contains("foo")) {
-                Toast.makeText(view.getContext(), "Authorized - " + user, Toast.LENGTH_SHORT).show();
+            if (user.contains("foo") && password.equals("bar")) {
+                startActivity(new Intent(this, HomeActivity.class));
             } else  {
                 Toast.makeText(view.getContext(), "Unauthorized", Toast.LENGTH_SHORT).show();
             }
