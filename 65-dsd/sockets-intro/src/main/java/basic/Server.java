@@ -1,5 +1,5 @@
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
+package basic;
+
 import java.io.OutputStream;
 import java.net.ServerSocket;
 import java.net.Socket;
