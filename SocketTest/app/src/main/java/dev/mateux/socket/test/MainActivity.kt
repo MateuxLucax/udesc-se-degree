@@ -68,9 +68,12 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun request(): String {
-        val request = Client()
-        request.run()
+//        val request = Client()
+//        request.run()
+//        while (request.getMessage().isBlank()) {
+//            Thread.sleep(100)
+//        }
 
-        return request.getMessage()
+        return "Hello world!"
     }
 }

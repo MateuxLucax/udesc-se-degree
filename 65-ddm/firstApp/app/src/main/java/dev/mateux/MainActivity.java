@@ -8,6 +8,8 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import dev.mateux.activity.HomeActivity;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override

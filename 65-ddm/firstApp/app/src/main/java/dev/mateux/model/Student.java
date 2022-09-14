@@ -1,14 +1,18 @@
 package dev.mateux.model;
 
+import android.graphics.drawable.Drawable;
+
 import androidx.annotation.NonNull;
 
 public class Student {
     private final String name;
     private final String email;
+    private final Drawable picture;
 
-    public Student(String name, String email) {
+    public Student(String name, String email, Drawable picture) {
         this.name = name;
         this.email = email;
+        this.picture = picture;
     }
 
     public String getName() {
@@ -17,6 +21,10 @@ public class Student {
 
     public String getEmail() {
         return email;
+    }
+
+    public Drawable getPicture() {
+        return picture;
     }
 
     @NonNull
