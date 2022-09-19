@@ -25,8 +25,8 @@ public class MainActivity extends AppCompatActivity {
             String user = editTextUser.getText().toString();
             String password = editTextPassword.getText().toString();
 
-            if (user.contains("foo") && password.equals("bar")) {
-                startActivity(new Intent(this, HomeActivity.class));
+            if (!user.isEmpty() && password.equals("hooray")) {
+                startActivity(new Intent(this, HomeActivity.class).putExtra("user", user));
             } else  {
                 Toast.makeText(view.getContext(), "Unauthorized", Toast.LENGTH_SHORT).show();
             }

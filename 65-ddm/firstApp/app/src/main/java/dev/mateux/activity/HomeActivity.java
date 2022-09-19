@@ -1,20 +1,23 @@
 package dev.mateux.activity;
 
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.widget.Toast;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import java.util.ArrayList;
+import java.io.IOException;
 import java.util.List;
 
 import dev.mateux.R;
-import dev.mateux.adapter.StudentAdapter;
-import dev.mateux.model.Student;
+import dev.mateux.adapter.RepoAdapter;
+import dev.mateux.model.Repo;
+import dev.mateux.service.GithubService;
+import dev.mateux.service.retrofit.RetrofitInitializer;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class HomeActivity extends AppCompatActivity {
 
@@ -23,23 +26,24 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        RecyclerView studentsList = findViewById(R.id.home_list);
-        List<Student> students = generateContent(99999);
-
+        RecyclerView reposList = findViewById(R.id.home_list);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
-        studentsList.setLayoutManager(layoutManager);
-        studentsList.setAdapter(new StudentAdapter(students));
-    }
+        reposList.setLayoutManager(layoutManager);
+        GithubService service = new RetrofitInitializer().getGithubService();
 
-    @NonNull
-    public List<Student> generateContent(int size) {
-        List<Student> content = new ArrayList<>();
-        for (int i = 1; i <= size; i++) {
-            Drawable picture = ContextCompat.getDrawable(this, i % 2 == 0 ? R.drawable.happy_img : R.drawable.sad);
-            content.add(new Student("student " + i, "student" + i + "@school.com", picture));
-        }
+        Call<List<Repo>> reposCall = service.listRepos(getIntent().getExtras().getString("user"));
+        reposCall.enqueue(new Callback<List<Repo>>() {
+            @Override
+            public void onResponse(Call<List<Repo>> call, Response<List<Repo>> response) {
+                List<Repo> repos = response.body();
+                reposList.setAdapter(new RepoAdapter(repos));
+            }
 
-        return content;
+            @Override
+            public void onFailure(Call<List<Repo>> call, Throwable t) {
+                System.out.println("error while fetching repos. " + t.getMessage());
+            }
+        });
     }
 
 }
